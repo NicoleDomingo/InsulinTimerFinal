@@ -1,0 +1,824 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.constraint.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/cl_cl"
+    android:layout_width="match_parent"
+
+    android:layout_height="match_parent"
+    android:layout_marginBottom="8dp"
+    android:layout_marginTop="8dp"
+    app:layout_constraintBottom_toBottomOf="parent"
+    app:layout_constraintTop_toTopOf="parent"
+    app:layout_constraintVertical_bias="1.0"
+    tools:layout_editor_absoluteX="0dp"><![CDATA[>
+
+
+    ]]>
+
+    <Spinner
+        android:id="@+id/spindate"
+        android:layout_width="179dp"
+        android:layout_height="27dp"
+        android:layout_marginTop="8dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.502"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/textView13" />
+
+    <Spinner
+        android:id="@+id/spindate2"
+        android:layout_width="179dp"
+        android:layout_height="27dp"
+
+        android:layout_marginTop="8dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.502"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/spindate" />
+
+
+    <TextView
+        android:id="@+id/textView13"
+        android:layout_width="0dp"
+        android:layout_height="20dp"
+        android:layout_marginTop="16dp"
+        android:text="Select Month"
+        android:textAlignment="center"
+        android:textColor="#000"
+        android:textSize="16sp"
+        android:textStyle="bold"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <TextView
+        android:id="@+id/textView14"
+        android:layout_width="0dp"
+        android:layout_height="29dp"
+        android:layout_marginTop="8dp"
+        android:text="Blood Sugar Summary (mg/dL)"
+        android:textAlignment="center"
+        android:textColor="#8d0000"
+        android:textSize="15dp"
+        android:textStyle="bold"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/spindate2" />
+
+    <ScrollView
+        android:id="@+id/scrollView2"
+        android:layout_width="0dp"
+        android:layout_height="389dp"
+        android:layout_marginBottom="16dp"
+        android:layout_marginEnd="8dp"
+        android:layout_marginStart="8dp"
+        android:layout_marginTop="8dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toStartOf="parent"
+
+        app:layout_constraintTop_toBottomOf="@+id/textView14"
+        app:layout_constraintVertical_bias="0.131">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical">
+
+            <TableLayout xmlns:android="http://schemas.android.com/apk/res/android"
+                android:layout_width="fill_parent"
+                android:layout_height="fill_parent"
+                android:stretchColumns="1">
+
+                <TableRow>
+                    <!-- Column 1 -->
+                    <TextView
+                        android:id="@+id/tbl_txt1"
+                        android:layout_width="27dp"
+                        android:layout_height="wrap_content"
+                        android:layout_margin="4dip"
+                        android:layout_weight="1"
+                        android:gravity="right"
+                        android:padding="10dip"
+                        android:text="" />
+
+                    <!-- Column 2 -->
+                    <TextView
+                        android:id="@+id/tbl_txt2"
+                        android:layout_width="0dip"
+                        android:layout_height="wrap_content"
+                        android:layout_margin="4dip"
+                        android:layout_weight="1"
+                        android:gravity="center"
+                        android:padding="10dip"
+                        android:text="Min"
+                        android:textColor="#000"
+                        android:textStyle="bold" />
+
+                    <!-- Column 3 -->
+                    <TextView
+                        android:id="@+id/tbl_txt3"
+                        android:layout_width="0dip"
+                        android:layout_height="wrap_content"
+                        android:layout_margin="4dip"
+                        android:layout_weight="1"
+                        android:gravity="center"
+                        android:padding="10dip"
+                        android:text="Avg"
+                        android:textColor="#000"
+                        android:textStyle="bold" />
+
+                    <TextView
+                        android:id="@+id/tbl_txt4"
+                        android:layout_width="0dip"
+                        android:layout_height="wrap_content"
+                        android:layout_margin="4dip"
+                        android:layout_weight="1"
+                        android:gravity="center"
+                        android:padding="10dip"
+                        android:text="Max"
+                        android:textColor="#000"
+                        android:textStyle="bold" />
+                </TableRow>
+
+                <View
+                    android:layout_height="0.5dip"
+                    android:background="#FF909090" />
+
+                <TableRow>
+                    <!-- Column 1 -->
+                    <TextView
+                        android:id="@+id/tbl_txt5"
+                        android:layout_width="27dp"
+                        android:layout_height="wrap_content"
+                        android:layout_margin="4dip"
+                        android:layout_weight="1"
+                        android:gravity="right"
+                        android:padding="10dip"
+                        android:text="Overall"
+                        android:textColor="@color/colorAccent"
+                        android:textColorHighlight="@color/colorAccent"
+                        android:textStyle="bold" />
+
+                    <!-- Column 2 -->
+                    <TextView
+                        android:id="@+id/a_min"
+                        android:layout_width="0dip"
+                        android:layout_height="wrap_content"
+                        android:layout_margin="4dip"
+                        android:layout_weight="1"
+                        android:gravity="center"
+                        android:padding="10dip"
+                        android:text="0" />
+
+                    <!-- Column 3 -->
+                    <TextView
+                        android:id="@+id/a_avg"
+                        android:layout_width="0dip"
+                        android:layout_height="wrap_content"
+                        android:layout_margin="4dip"
+                        android:layout_weight="1"
+                        android:gravity="center"
+                        android:padding="10dip"
+                        android:text="0"
+                        android:textColor="#8d0000" />
+
+                    <TextView
+                        android:id="@+id/a_max"
+                        android:layout_width="0dip"
+                        android:layout_height="wrap_content"
+                        android:layout_margin="4dip"
+                        android:layout_weight="1"
+                        android:gravity="center"
+                        android:padding="10dip"
+                        android:text="0"
+                        android:textColor="#8d0000" />
+                </TableRow>
+
+                <View
+                    android:layout_height="0.5dip"
+                    android:background="#FF909090" />
+
+                <TableRow>
+                    <!-- Column 1 -->
+                    <TextView
+                        android:id="@+id/tbl_txt9"
+                        android:layout_width="27dp"
+                        android:layout_height="wrap_content"
+                        android:layout_margin="4dip"
+                        android:layout_weight="1"
+                        android:gravity="right"
+
+                        android:padding="10dip"
+                        android:text="Meal Type"
+                        android:textColor="#000"
+                        android:textStyle="bold" />
+
+                    <!-- Column 2 -->
+                    <TextView
+                        android:id="@+id/tbl_txt10"
+                        android:layout_width="0dip"
+                        android:layout_height="wrap_content"
+                        android:layout_margin="4dip"
+                        android:layout_weight="1"
+                        android:gravity="center"
+                        android:padding="10dip"
+                        android:text="Min"
+                        android:textColor="#000"
+                        android:textStyle="bold" />
+
+                    <!-- Column 3 -->
+                    <TextView
+                        android:id="@+id/tbl_txt11"
+                        android:layout_width="0dip"
+                        android:layout_height="wrap_content"
+                        android:layout_margin="4dip"
+                        android:layout_weight="1"
+                        android:gravity="center"
+                        android:padding="10dip"
+                        android:text="Avg"
+                        android:textColor="#000"
+                        android:textStyle="bold" />
+
+                    <TextView
+                        android:id="@+id/tbl_txt12"
+                        android:layout_width="0dip"
+                        android:layout_height="wrap_content"
+                        android:layout_margin="4dip"
+                        android:layout_weight="1"
+                        android:gravity="center"
+                        android:padding="10dip"
+                        android:text="Max"
+                        android:textColor="#000"
+                        android:textStyle="bold" />
+                </TableRow>
+
+                <View
+                    android:layout_height="0.5dip"
+                    android:background="#FF909090" />
+
+                <TableRow>
+                    <!-- Column 1 -->
+                    <TextView
+                        android:id="@+id/tbl_txt13"
+                        android:layout_width="69dp"
+                        android:layout_height="wrap_content"
+                        android:layout_margin="4dip"
+                        android:layout_weight="1"
+                        android:gravity="right"
+                        android:padding="10dip"
+                        android:text="Before Breakfast"
+                        android:textColor="#000" />
+
+                    <!-- Column 2 -->
+                    <TextView
+                        android:id="@+id/bb_min"
+                        android:layout_width="0dip"
+                        android:layout_height="wrap_content"
+                        android:layout_margin="4dip"
+                        android:layout_weight="1"
+                        android:gravity="center"
+                        android:padding="10dip"
+                        android:text="0" />
+
+                    <!-- Column 3 -->
+                    <TextView
+                        android:id="@+id/bb_avg"
+                        android:layout_width="0dip"
+                        android:layout_height="wrap_content"
+                        android:layout_margin="4dip"
+                        android:layout_weight="1"
+                        android:gravity="center"
+                        android:padding="10dip"
+                        android:text="0"
+                        android:textColor="#8d0000" />
+
+                    <TextView
+                        android:id="@+id/bb_max"
+                        android:layout_width="0dip"
+                        android:layout_height="wrap_content"
+                        android:layout_margin="4dip"
+                        android:layout_weight="1"
+                        android:gravity="center"
+                        android:padding="10dip"
+                        android:text="0"
+                        android:textColor="#8d0000" />
+                </TableRow>
+
+                <TableRow>
+                    <!-- Column 1 -->
+                    <TextView
+                        android:id="@+id/tbl_txt17"
+                        android:layout_width="69dp"
+                        android:layout_height="wrap_content"
+                        android:layout_margin="4dip"
+                        android:layout_weight="1"
+                        android:gravity="right"
+                        android:padding="10dip"
+                        android:text="After Breakfast"
+                        android:textColor="#000" />
+
+                    <!-- Column 2 -->
+                    <TextView
+                        android:id="@+id/ab_min"
+                        android:layout_width="0dip"
+                        android:layout_height="wrap_content"
+                        android:layout_margin="4dip"
+                        android:layout_weight="1"
+                        android:gravity="center"
+                        android:padding="10dip"
+                        android:text="0" />
+
+                    <!-- Column 3 -->
+                    <TextView
+                        android:id="@+id/ab_avg"
+                        android:layout_width="0dip"
+                        android:layout_height="wrap_content"
+                        android:layout_margin="4dip"
+                        android:layout_weight="1"
+                        android:gravity="center"
+                        android:padding="10dip"
+                        android:text="0"
+                        android:textColor="#8d0000" />
+
+                    <TextView
+                        android:id="@+id/ab_max"
+                        android:layout_width="0dip"
+                        android:layout_height="wrap_content"
+                        android:layout_margin="4dip"
+                        android:layout_weight="1"
+                        android:gravity="center"
+                        android:padding="10dip"
+                        android:text="0"
+                        android:textColor="#8d0000" />
+                </TableRow>
+
+                <View
+                    android:layout_height="0.5dip"
+                    android:background="#FF909090" />
+
+                <TableRow>
+                    <!-- Column 1 -->
+                    <TextView
+                        android:id="@+id/tbl_txt21"
+                        android:layout_width="69dp"
+                        android:layout_height="wrap_content"
+                        android:layout_margin="4dip"
+                        android:layout_weight="1"
+                        android:gravity="right"
+                        android:padding="10dip"
+                        android:text="Before Lunch"
+                        android:textColor="#000" />
+
+                    <!-- Column 2 -->
+                    <TextView
+                        android:id="@+id/bl_min"
+                        android:layout_width="0dip"
+                        android:layout_height="wrap_content"
+                        android:layout_margin="4dip"
+                        android:layout_weight="1"
+                        android:gravity="center"
+                        android:padding="10dip"
+                        android:text="0" />
+
+                    <!-- Column 3 -->
+                    <TextView
+                        android:id="@+id/bl_avg"
+                        android:layout_width="0dip"
+                        android:layout_height="wrap_content"
+                        android:layout_margin="4dip"
+                        android:layout_weight="1"
+                        android:gravity="center"
+                        android:padding="10dip"
+                        android:text="0"
+                        android:textColor="#8d0000" />
+
+                    <TextView
+                        android:id="@+id/bl_max"
+                        android:layout_width="0dip"
+                        android:layout_height="wrap_content"
+                        android:layout_margin="4dip"
+                        android:layout_weight="1"
+                        android:gravity="center"
+                        android:padding="10dip"
+                        android:text="0"
+                        android:textColor="#8d0000" />
+                </TableRow>
+
+                <TableRow>
+                    <!-- Column 1 -->
+                    <TextView
+                        android:id="@+id/tbl_txt25"
+                        android:layout_width="69dp"
+                        android:layout_height="wrap_content"
+                        android:layout_margin="4dip"
+                        android:layout_weight="1"
+                        android:gravity="right"
+                        android:padding="10dip"
+                        android:text="After Lunch"
+                        android:textColor="#000" />
+
+                    <!-- Column 2 -->
+                    <TextView
+                        android:id="@+id/al_min"
+                        android:layout_width="0dip"
+                        android:layout_height="wrap_content"
+                        android:layout_margin="4dip"
+                        android:layout_weight="1"
+                        android:gravity="center"
+                        android:padding="10dip"
+                        android:text="0" />
+
+                    <!-- Column 3 -->
+                    <TextView
+                        android:id="@+id/al_avg"
+                        android:layout_width="0dip"
+                        android:layout_height="wrap_content"
+                        android:layout_margin="4dip"
+                        android:layout_weight="1"
+                        android:gravity="center"
+                        android:padding="10dip"
+                        android:text="0"
+                        android:textColor="#8d0000" />
+
+                    <TextView
+                        android:id="@+id/al_max"
+                        android:layout_width="0dip"
+                        android:layout_height="wrap_content"
+                        android:layout_margin="4dip"
+                        android:layout_weight="1"
+                        android:gravity="center"
+                        android:padding="10dip"
+                        android:text="0"
+                        android:textColor="#8d0000" />
+                </TableRow>
+
+                <View
+                    android:layout_height="0.5dip"
+                    android:background="#FF909090" />
+
+                <TableRow>
+                    <!-- Column 1 -->
+                    <TextView
+                        android:id="@+id/tbl_txt29"
+                        android:layout_width="69dp"
+                        android:layout_height="wrap_content"
+                        android:layout_margin="4dip"
+                        android:layout_weight="1"
+                        android:gravity="right"
+                        android:padding="10dip"
+                        android:text="Before Snack"
+                        android:textColor="#000" />
+
+                    <!-- Column 2 -->
+                    <TextView
+                        android:id="@+id/bs_min"
+                        android:layout_width="0dip"
+                        android:layout_height="wrap_content"
+                        android:layout_margin="4dip"
+                        android:layout_weight="1"
+                        android:gravity="center"
+                        android:padding="10dip"
+                        android:text="0" />
+
+                    <!-- Column 3 -->
+                    <TextView
+                        android:id="@+id/bs_avg"
+                        android:layout_width="0dip"
+                        android:layout_height="wrap_content"
+                        android:layout_margin="4dip"
+                        android:layout_weight="1"
+                        android:gravity="center"
+                        android:padding="10dip"
+                        android:text="0"
+                        android:textColor="#8d0000" />
+
+                    <TextView
+                        android:id="@+id/bs_max"
+                        android:layout_width="0dip"
+                        android:layout_height="wrap_content"
+                        android:layout_margin="4dip"
+                        android:layout_weight="1"
+                        android:gravity="center"
+                        android:padding="10dip"
+
+                        android:text="0"
+                        android:textColor="#8d0000" />
+                </TableRow>
+
+                <TableRow>
+                    <!-- Column 1 -->
+                    <TextView
+                        android:id="@+id/tbl_txt33"
+                        android:layout_width="69dp"
+                        android:layout_height="wrap_content"
+                        android:layout_margin="4dip"
+                        android:layout_weight="1"
+                        android:gravity="right"
+                        android:padding="10dip"
+                        android:text="After Snack"
+                        android:textColor="#000" />
+
+                    <!-- Column 2 -->
+                    <TextView
+                        android:id="@+id/as_min"
+                        android:layout_width="0dip"
+                        android:layout_height="wrap_content"
+                        android:layout_margin="4dip"
+                        android:layout_weight="1"
+                        android:gravity="center"
+
+                        android:padding="10dip"
+                        android:text="0" />
+
+                    <!-- Column 3 -->
+                    <TextView
+                        android:id="@+id/as_avg"
+                        android:layout_width="0dip"
+                        android:layout_height="wrap_content"
+                        android:layout_margin="4dip"
+                        android:layout_weight="1"
+                        android:gravity="center"
+                        android:padding="10dip"
+                        android:text="0"
+                        android:textColor="#8d0000" />
+
+                    <TextView
+                        android:id="@+id/as_max"
+                        android:layout_width="0dip"
+                        android:layout_height="wrap_content"
+                        android:layout_margin="4dip"
+                        android:layout_weight="1"
+                        android:gravity="center"
+                        android:padding="10dip"
+                        android:text="0"
+                        android:textColor="#8d0000" />
+                </TableRow>
+
+                <View
+                    android:layout_height="0.5dip"
+                    android:background="#FF909090" />
+
+                <TableRow>
+                    <!-- Column 1 -->
+                    <TextView
+                        android:id="@+id/tbl_txt37"
+                        android:layout_width="69dp"
+                        android:layout_height="wrap_content"
+                        android:layout_margin="4dip"
+                        android:layout_weight="1"
+                        android:gravity="right"
+                        android:padding="10dip"
+                        android:text="Before Dinner"
+                        android:textColor="#000" />
+
+                    <!-- Column 2 -->
+                    <TextView
+                        android:id="@+id/bd_min"
+                        android:layout_width="0dip"
+                        android:layout_height="wrap_content"
+                        android:layout_margin="4dip"
+                        android:layout_weight="1"
+                        android:gravity="center"
+                        android:padding="10dip"
+                        android:text="0" />
+
+                    <!-- Column 3 -->
+                    <TextView
+                        android:id="@+id/bd_avg"
+                        android:layout_width="0dip"
+                        android:layout_height="wrap_content"
+                        android:layout_margin="4dip"
+                        android:layout_weight="1"
+                        android:gravity="center"
+                        android:padding="10dip"
+                        android:text="0"
+                        android:textColor="#8d0000" />
+
+                    <TextView
+                        android:id="@+id/bd_max"
+                        android:layout_width="0dip"
+                        android:layout_height="wrap_content"
+                        android:layout_margin="4dip"
+                        android:layout_weight="1"
+                        android:gravity="center"
+                        android:padding="10dip"
+                        android:text="0"
+                        android:textColor="#8d0000" />
+                </TableRow>
+
+                <TableRow>
+                    <!-- Column 1 -->
+                    <TextView
+                        android:id="@+id/tbl_txt41"
+                        android:layout_width="69dp"
+                        android:layout_height="wrap_content"
+                        android:layout_margin="4dip"
+                        android:layout_weight="1"
+                        android:gravity="right"
+                        android:padding="10dip"
+                        android:text="After Dinner"
+                        android:textColor="#000" />
+
+                    <!-- Column 2 -->
+                    <TextView
+                        android:id="@+id/ad_min"
+                        android:layout_width="0dip"
+                        android:layout_height="wrap_content"
+                        android:layout_margin="4dip"
+                        android:layout_weight="1"
+                        android:gravity="center"
+                        android:padding="10dip"
+                        android:text="0" />
+
+                    <!-- Column 3 -->
+                    <TextView
+                        android:id="@+id/ad_avg"
+                        android:layout_width="0dip"
+                        android:layout_height="wrap_content"
+                        android:layout_margin="4dip"
+                        android:layout_weight="1"
+                        android:gravity="center"
+                        android:padding="10dip"
+                        android:text="0"
+                        android:textColor="#8d0000" />
+
+                    <TextView
+                        android:id="@+id/ad_max"
+                        android:layout_width="0dip"
+                        android:layout_height="wrap_content"
+                        android:layout_margin="4dip"
+                        android:layout_weight="1"
+                        android:gravity="center"
+                        android:padding="10dip"
+                        android:text="0"
+                        android:textColor="#8d0000" />
+                </TableRow>
+
+                <View
+                    android:layout_height="0.5dip"
+                    android:background="#FF909090" />
+
+                <TableRow>
+                    <!-- Column 1 -->
+                    <TextView
+                        android:id="@+id/tbl_txt45"
+                        android:layout_width="69dp"
+                        android:layout_height="wrap_content"
+                        android:layout_margin="4dip"
+                        android:layout_weight="1"
+                        android:gravity="right"
+                        android:padding="10dip"
+                        android:text="Fasting"
+                        android:textColor="#000" />
+
+                    <!-- Column 2 -->
+                    <TextView
+                        android:id="@+id/f_min"
+                        android:layout_width="0dip"
+                        android:layout_height="wrap_content"
+                        android:layout_margin="4dip"
+                        android:layout_weight="1"
+                        android:gravity="center"
+                        android:padding="10dip"
+                        android:text="0" />
+
+                    <!-- Column 3 -->
+                    <TextView
+                        android:id="@+id/f_avg"
+                        android:layout_width="0dip"
+                        android:layout_height="wrap_content"
+                        android:layout_margin="4dip"
+                        android:layout_weight="1"
+                        android:gravity="center"
+                        android:padding="10dip"
+                        android:text="0"
+                        android:textColor="#8d0000" />
+
+                    <TextView
+                        android:id="@+id/f_max"
+                        android:layout_width="0dip"
+                        android:layout_height="wrap_content"
+                        android:layout_margin="4dip"
+                        android:layout_weight="1"
+                        android:gravity="center"
+                        android:padding="10dip"
+                        android:text="0"
+                        android:textColor="#8d0000" />
+                </TableRow>
+
+                <TableRow>
+                    <!-- Column 1 -->
+                    <TextView
+                        android:id="@+id/tbl_txt49"
+                        android:layout_width="69dp"
+                        android:layout_height="wrap_content"
+                        android:layout_margin="4dip"
+                        android:layout_weight="1"
+                        android:gravity="right"
+                        android:padding="10dip"
+                        android:text="Bedtime"
+                        android:textColor="#000" />
+
+                    <!-- Column 2 -->
+                    <TextView
+                        android:id="@+id/b_min"
+                        android:layout_width="0dip"
+                        android:layout_height="wrap_content"
+                        android:layout_margin="4dip"
+                        android:layout_weight="1"
+                        android:gravity="center"
+                        android:padding="10dip"
+                        android:text="0" />
+
+                    <!-- Column 3 -->
+                    <TextView
+                        android:id="@+id/b_avg"
+                        android:layout_width="0dip"
+                        android:layout_height="wrap_content"
+                        android:layout_margin="4dip"
+                        android:layout_weight="1"
+                        android:gravity="center"
+                        android:padding="10dip"
+                        android:text="0"
+                        android:textColor="#8d0000" />
+
+                    <TextView
+                        android:id="@+id/b_max"
+                        android:layout_width="0dip"
+                        android:layout_height="wrap_content"
+                        android:layout_margin="4dip"
+                        android:layout_weight="1"
+                        android:gravity="center"
+                        android:padding="10dip"
+                        android:text="0"
+                        android:textColor="#8d0000" />
+                </TableRow>
+
+                <TableRow>
+                    <!-- Column 1 -->
+                    <TextView
+                        android:id="@+id/tbl_txt53"
+                        android:layout_width="69dp"
+                        android:layout_height="wrap_content"
+                        android:layout_margin="4dip"
+                        android:layout_weight="1"
+                        android:gravity="right"
+                        android:padding="10dip"
+                        android:text="Other"
+                        android:textColor="#000" />
+
+                    <!-- Column 2 -->
+                    <TextView
+                        android:id="@+id/o_min"
+                        android:layout_width="0dip"
+                        android:layout_height="wrap_content"
+                        android:layout_margin="4dip"
+                        android:layout_weight="1"
+                        android:gravity="center"
+                        android:padding="10dip"
+                        android:text="0" />
+
+                    <!-- Column 3 -->
+                    <TextView
+                        android:id="@+id/o_avg"
+                        android:layout_width="0dip"
+                        android:layout_height="wrap_content"
+                        android:layout_margin="4dip"
+                        android:layout_weight="1"
+                        android:gravity="center"
+                        android:padding="10dip"
+                        android:text="0"
+                        android:textColor="#8d0000" />
+
+                    <TextView
+                        android:id="@+id/o_max"
+                        android:layout_width="0dip"
+                        android:layout_height="wrap_content"
+                        android:layout_margin="4dip"
+                        android:layout_weight="1"
+                        android:gravity="center"
+                        android:padding="10dip"
+                        android:text="0"
+                        android:textColor="#8d0000" />
+                </TableRow>
+
+            </TableLayout>
+        </LinearLayout>
+
+    </ScrollView>
+
+
+</android.support.constraint.ConstraintLayout>

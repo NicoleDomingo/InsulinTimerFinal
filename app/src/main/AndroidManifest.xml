@@ -1,0 +1,41 @@
+<?xml version="1.0" encoding="utf-8"?>
+<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+    package="com.example.asus.insulintimer">
+    <uses-permission android:name="android.permission.WAKE_LOCK" />
+    <uses-permission android:name="android.permission.VIBRATE" />
+    <uses-permission android:name="android.permission.INTERNET" />
+    <uses-permission android:name="android.permission.READ_EXTERNAL_STORAGE" />
+
+    <application
+        android:allowBackup="true"
+        android:icon="@mipmap/timerlogo"
+        android:label="Insulin Timer"
+        android:roundIcon="@mipmap/timerlogo"
+        android:supportsRtl="true"
+        android:theme="@style/AppTheme">
+        <activity android:name=".ActivityLogin" android:screenOrientation="portrait">
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+        </activity>
+        <activity android:name=".MainActivity"
+            android:windowSoftInputMode="adjustNothing"
+            android:screenOrientation="portrait"
+            />
+        <activity android:name=".ActivityRegister"
+            android:screenOrientation="portrait"/>
+        <activity android:name=".SecReg"
+            android:screenOrientation="portrait" />
+        <activity android:name=".AlarmNotif"
+            android:screenOrientation="portrait"/>
+        <activity android:name=".WelcomePage"
+            android:screenOrientation="portrait"></activity>
+
+        <receiver android:name=".AlarmReceiver" ></receiver>
+        <service android:name=".AlarmNotificationService" />
+        <service android:name=".AlarmSoundService"></service>
+    </application>
+
+</manifest>
